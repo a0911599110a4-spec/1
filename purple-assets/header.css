@@ -1,0 +1,22 @@
+.main-header {
+  padding: .5rem;
+  background-color: var(--header);
+}
+.main-header a {
+  display: block;
+  height: 100%;
+  width: fit-content;
+  padding-left: 1rem;
+}
+.main-header a img {
+  max-width: 10rem;
+  height: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .main-header a {
+    padding-left: 0;
+    margin: 0 auto;
+  }
+}

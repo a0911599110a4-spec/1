@@ -1,0 +1,8 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const paymentsContainerArr = document.querySelectorAll('.payments-block');
+    paymentsContainerArr.forEach(el => {
+        if(el.children.length > 4) {
+            el.classList.add('wrap-condition')
+        }
+    })
+});
